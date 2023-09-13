@@ -1,10 +1,16 @@
 import './App.css';
+import Header from "./Header.js";
+import Main from "./Main.js";
+import Footer from "./Footer.js";
+
 // Testing Git Remote Repo
 function App() {
   return (
-    <div className="App">
-Homepage
-    </div>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 

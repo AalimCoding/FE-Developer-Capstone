@@ -1,0 +1,242 @@
+.footerGrid .box {
+    background-color: #edefee;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footerGrid {
+    display: grid;
+    background-color: #edefee;
+    width: 100%;
+    height: 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.headerGrid .box {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 90%;
+    border-radius: 10%;
+    height: 100%;
+    width: 10%;
+    margin: 1%;
+    padding: 0px;
+}
+
+.headerGrid {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 100%;
+    height: 20%;
+}
+
+#testimonialscontainer {
+    display: grid;
+    row-gap: 0%;
+}
+
+ul {
+    list-style: none;
+    color: #495e57;
+    font-weight: bold;
+}
+
+ul li {
+    color: #333333;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.headerGrid li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.headerGrid img {
+    height: 100%;
+    width: 20%;
+}
+
+.footerGrid img {
+    width: 100%;
+}
+
+.flex-container#testimonialsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    max-height: 500px;
+    background-color: #edefee;
+    grid-template-areas: "title title title title"
+        "t1 t2 t3 t4"
+
+
+}
+
+#testimonialsContainer div {
+    width: 100%;
+    margin: 1%;
+}
+
+h1#testimonials {
+    grid-area: title;
+    text-align: center;
+    padding: 0%;
+}
+
+.testimonial1 {
+    grid-area: t1;
+}
+
+.testimonial2 {
+    grid-area: t2;
+}
+
+.testimonial3 {
+    grid-area: t3;
+}
+
+.testimonial4 {
+    grid-area: t4;
+}
+
+#Intro1 h1 {
+    color: #f4ce14;
+}
+
+
+
+#Intro1 {
+    width: 100%;
+    background-color: #495e57;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "iTitle iImage"
+        "iSubtitle iImage"
+        "iText iImage"
+        "iButton iImage";
+}
+
+#Intro2 {
+    width: 100%;
+    background-color: #495e57;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "iTitle iImage"
+        "iSubtitle iImage"
+        "iText iImage";
+}
+
+#specialsIntro {
+    width: 100%;
+    background-color: #edefee;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "specialsTitle specialsButton";
+}
+
+.special {
+    background-color: #edefee;
+    display: flexbox;
+    flex-direction: column;
+    width: 25%;
+    margin: 20px;
+
+}
+
+#specialsIntro h1 {
+    grid-area: specialsTitle;
+}
+
+#specialsIntro button {
+    grid-area: specialsButton;
+    background-color: #f4ce14;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: right;
+
+}
+
+
+#IntroTitle {
+    grid-area: iTitle;
+
+    color: #f4ce14;
+}
+
+#IntroSubtitle {
+    grid-area: iSubtitle;
+
+}
+
+#IntroText {
+    grid-area: iText;
+}
+
+#IntroButton {
+    background-color: #f4ce14;
+    border-radius: 10px;
+    font-size: 100%;
+    width: 50%;
+
+}
+
+#IntroImage {
+    grid-area: iImage;
+    border-radius: 10%;
+    padding: 10%;
+
+}
+
+#specialsFlex {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #edefee;
+
+
+}
+
+.testimonial img {
+    width: 90%;
+}
+
+#iconGrid {
+    display: flex;
+    flex-direction: row;
+}
+
+#iconGrid img {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    justify-self: center;
+
+
+}
+
+.special img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+
+
+}

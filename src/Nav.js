@@ -1,23 +1,25 @@
-function Nav(){return(<ul>
+function Nav(){return(
 
-        <img src="/LittleLemonLogo.png" width="200px"></img>
+<ul class="headerGrid">
 
-    <li>
+        <img src="/LittleLemonLogo.png" ></img>
+
+        <li class="box box1">
             <a href="Home">Home</a>
         </li>
-        <li>
+        <li class="box box2">
             <a href="About">About</a>
         </li>
-        <li>
+        <li class="box box3">
             <a href="Reservations">Reservations</a>
         </li>
-        <li>
+        <li class="box box4">
             <a href="Order Online">Order Online</a>
         </li>
-        <li>
+        <li class="box box5">
             <a href="Menu">Menu</a>
         </li>
-        <li>
+        <li class="box box6">
             <a href="Login">Login</a>
         </li>
 </ul>)}

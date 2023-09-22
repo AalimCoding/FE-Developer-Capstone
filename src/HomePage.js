@@ -2,7 +2,7 @@
 import Chicago from "./Chicago"
 import CallToAction from "./CallToAction"
 import Specials from "./Specials"
-import BookingPage from "./BookingPage"
+
 
 function HomePage() {
     return (
@@ -11,7 +11,7 @@ function HomePage() {
         <CallToAction />
         <Specials />
         <Chicago />
-        <BookingPage/></div>
+        </div>
     )
 }
 export default HomePage;

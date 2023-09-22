@@ -1,5 +1,3 @@
-import { Routes, Route, Link } from "react-router-dom";
-
 function Footer(){return(
 
 <div class="footerGrid">

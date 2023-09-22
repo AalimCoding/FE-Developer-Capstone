@@ -1,31 +1,27 @@
-import { Routes, Link, Route} from 'react-router-dom';
+import { Routes, Link, Route } from 'react-router-dom';
 import Main from "./Main.js";
 import Chicago from "./Chicago.js";
 import CallToAction from "./CallToAction.js";
 import BookingPage from "./BookingPage.js";
 import CustomersSay from "./CustomersSay.js";
 
-function Nav() {
+function Nav(props) {
     return (
-
-        <nav class="headerGrid" >
-
-            <img src="/LittleLemonLogo.png" ></img>
-            <Link to="/" className="nav-item">Home</Link>
+        <nav className="headerGrid">
+            <img src="/LittleLemonLogo.png" alt="Little Lemon Logo" />
             <Link to="/About" className="nav-item">About</Link>
-            <Link to="/Reserve A Table" className="nav-item">Reserve A Table</Link>
+            <Link to="/ReserveATable" className="nav-item">Reserve A Table</Link>
             <Link to="/Testimonials" className="nav-item">Testimonials</Link>
             <Link to="/Backstory" className="nav-item">Backstory</Link>
 
             <Routes>
-                <Route path="/" element={<Main />}></Route>
-                <Route path="/About" element={<CallToAction />}></Route>
-                <Route path="/Reserve A Table" element={<BookingPage />}></Route>
-                <Route path="/Testimonials" element={<CustomersSay />}></Route>
-                <Route path="/Backstory" element={<Chicago />}></Route>
+                <Route path="/About" element={<CallToAction />} />
+                <Route path="/ReserveATable" element={<BookingPage availableTimes={props.availableTimes} dispatch={props.dispatch} />} />
+                <Route path="/Testimonials" element={<CustomersSay />} />
+                <Route path="/Backstory" element={<Chicago />} />
             </Routes>
-
-        </nav>)
+        </nav>
+    );
 }
 
 export default Nav;

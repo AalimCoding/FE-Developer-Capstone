@@ -1,7 +1,11 @@
-import Nav from "./Nav.js"
+function Header() {
 
-function Header(){ return(
+    return (
 
-<Nav/>
-)}
+        <div>
+
+        </div>
+    )
+}
+
 export default Header;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BookingForm from "./BookingForm";
 
 function BookingPage(props) {
-    // Define state for form data
+
     const [formData, setFormData] = useState({
         date: "",
         time: "",
@@ -10,11 +10,7 @@ function BookingPage(props) {
         occasion: "",
     });
 
-    // Handle form submission
-    const handleSubmit = (data) => {
-        // You can access form data here
-        console.log("Form submitted with data:", data);
-    };
+
 
     return (
         <div>
@@ -23,10 +19,12 @@ function BookingPage(props) {
 
             <BookingForm
                 availableTimes={props.availableTimes}
-                onSubmit={handleSubmit} // Pass the submit handler as a prop
-                formData={formData} // Pass the form data as a prop
-                setFormData={setFormData} // Pass the setter for form data as a prop
+                handleSubmit={props.handleSubmit}
+                formData={formData}
+                setFormData={setFormData}
                 dispatch={props.dispatch}
+                submitForm={props.submitForm}
+
             />
         </div>
     );

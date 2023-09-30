@@ -1,42 +1,37 @@
 import React, { useState } from "react";
-import Main from "./Main.js";
+import { datesForBooking } from './mockAPI'
+import { Routes, Link, Route, useNavigate } from 'react-router-dom';
+import ConfirmedBooking from "./ConfirmedBooking";
 
-function BookingForm({
-    availableTimes,
-    onSubmit, // Add onSubmit as a prop
-    dispatch,
-}) {
+
+function BookingForm({ availableTimes, dispatch, submitForm }) {
+    const navigate = useNavigate(); // Add this line to get the navigate function
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch({ type: "removeTime", time: time })
+
+        if (submitForm(date, time, guests, occasion)) {
+            navigate("/ConfirmedBooking");
+        }
+
+    };
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        dispatch({type: "removeTime", time: time})
-
-
-        // Create an object with form data
-        const formData = {
-            date,
-            time,
-            guests,
-            occasion,
-        };
-
-        // Pass the form data to the parent component's onSubmit function
-        onSubmit(formData);
-    };
-
     const availableOccasions = ["Birthday", "Anniversary"];
 
-    const timeOptions = availableTimes.map((item) => (
+    // Question marks make sure that the values aren't undefined before they are mapped.
+
+    const timeOptions = availableTimes?.map((item) => (
         <option key={item} value={item}>
             {item}
         </option>
     ));
 
-    const occasionOptions = availableOccasions.map((item) => (
+    const occasionOptions = availableOccasions?.map((item) => (
         <option key={item} value={item}>
             {item}
         </option>
@@ -84,7 +79,7 @@ function BookingForm({
                 {occasionOptions}
             </select>
 
-            <input type="submit" value="Make Your reservation" />
+            <button type="submit">Make Your Reservation</button>
         </form>
     );
 }

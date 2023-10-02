@@ -12,7 +12,7 @@ function Footer(){return(
             <a href="About">About</a>
         </li>
         <li class="box box3">
-            <a href="Reservations">Reservations</a>
+            <a href="ReserveATable">Reservations</a>
         </li>
         <li class="box box4">
             <a href="Order Online">Order Online</a>

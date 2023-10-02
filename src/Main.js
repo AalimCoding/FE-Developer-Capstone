@@ -18,14 +18,26 @@ function Main() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Validate and process form data
-        if (date && time && guests && occasion) {
+        if (!date || date==""){
+            alert("Date is a required field!")
+        }
+        if (!time){
+            alert("Time is a required field!")
+        }
+        if (!guests){
+            alert("Guests is a required field!")
+        }
+        if (guests < 1){
+            alert("Oops! We need at least one guest to serve!")
+        }
+        if (guests > 8){
+            alert("Oops! We can't seat that many guests!")
+        }
+        else {
             dispatch({ type: "removeTime", time: time });
             if (submitForm(date, time, guests, occasion)) {
                 navigate("/ConfirmedBooking");
             }
-        } else {
-            // Handle form validation errors, e.g., show error messages
-            console.log("All fields are required.");
         }
     };
 

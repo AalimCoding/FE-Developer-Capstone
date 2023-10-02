@@ -8,6 +8,6 @@ test('Renders the BookingForm heading', () => {
     render(<BrowserRouter>
     <BookingForm />
     </BrowserRouter>);
-    const headingElement = screen.getByText("Choose date");
+    const headingElement = screen.getByText("*Choose date");
     expect(headingElement).toBeInTheDocument();
 })

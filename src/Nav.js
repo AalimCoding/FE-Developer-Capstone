@@ -11,7 +11,7 @@ function Nav(props) {
             <Link to="/About" className="nav-item">About</Link>
             <Link to="/ReserveATable" className="nav-item">Reserve A Table</Link>
             <Link to="/Testimonials" className="nav-item">Testimonials</Link>
-            <Link to="/Backstory" className="nav-item">Backstory</Link>
+            <Link to="/About" className="nav-item">Backstory</Link>
         </nav>
     );
 }

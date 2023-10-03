@@ -15,7 +15,6 @@ function BookingPage(props) {
     return (
         <div>
             <h1>Book A Table Here</h1>
-            <p>Text goes here</p>
 
             <BookingForm
                 availableTimes={props.availableTimes}

@@ -54,7 +54,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<CallToAction />} />
         <Route path="/About" element={<CallToAction />} />
         <Route path="/ReserveATable" element={<BookingPage availableTimes={state.availableTimes} submitForm={submitForm} dispatch={dispatch} handleSubmit={handleSubmit}/>} />
         <Route path="/Testimonials" element={<CustomersSay />} />

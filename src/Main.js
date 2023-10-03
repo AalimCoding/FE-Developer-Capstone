@@ -64,8 +64,8 @@ function Main() {
     }
 
     return (
-        <div>
-            <Nav availableTimes={state.availableTimes} dispatch={dispatch} handleSubmit={handleSubmit} submitForm={submitForm} />
+        <div> 
+            Welcome To Little Lemon
         </div>
     );
 };
